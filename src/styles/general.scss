@@ -1,12 +1,9 @@
 //import di bootstrap 
 @import "bootstrap/scss/bootstrap";
+@import './partials/variables';
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-// colore sfondo di esempio 
-body{
-    background-color: black;
 }

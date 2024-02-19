@@ -1,21 +1,43 @@
 <template>
- <!-- Contenuto del componente radice -->
 
- <!-- <HelloWorld/> tag inserito nel template per richimare il componente e visualizzarlo nel dom  -->
+  <header>
+    <AppHeader/>
+  </header>
+
+  <main>
+    <AppMain/>
+  </main>
+
+  <footer>
+    <AppFooter/>
+  </footer>
+<!-- 
+<AppButton yellow :button-text="'bella'" :icon="yellowIcon"/> -->
 
 </template>
 
 <script>
-// Definizione delle opzioni del componente
-// import HelloWorld from './components/HelloWorld.vue'; esempio di importazioni di un componente 
+import AppHeader from './components/header/AppHeader.vue';
+import AppMain from './components/main/AppMain.vue';
+import AppFooter from './components/footer/AppFooter.vue';
+import AppButton from './components/Button/AppButton.vue';
+// import yellowIcon from './assets/img/Speaker-icon.png';
 
 
 //inserimento tag creazione componenti 
 export default {
 
   components : {
-    // HelloWorld //esempio di richiamo del componente all'iterno di components
-}
+    AppHeader,
+    AppMain,
+    AppFooter,
+    AppButton,
+},
+data() {
+  return {
+    // yellowIcon: yellowIcon
+  }
+},
   
 }
 
