@@ -11,8 +11,8 @@
   <footer>
     <AppFooter/>
   </footer>
-<!-- 
-<AppButton yellow :button-text="'bella'" :icon="yellowIcon"/> -->
+
+<!-- <AppButton yellow :button-text="'bella'" /> -->
 
 </template>
 
@@ -20,7 +20,7 @@
 import AppHeader from './components/header/AppHeader.vue';
 import AppMain from './components/main/AppMain.vue';
 import AppFooter from './components/footer/AppFooter.vue';
-import AppButton from './components/Button/AppButton.vue';
+// import AppButton from './components/Button/AppButton.vue';
 // import yellowIcon from './assets/img/Speaker-icon.png';
 
 
@@ -31,7 +31,7 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
-    AppButton,
+    //  AppButton,
 },
 data() {
   return {

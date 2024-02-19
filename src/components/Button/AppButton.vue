@@ -1,8 +1,6 @@
 <template>
-    <button type="button" class="btn rounded-5 " :class="computedClass">
-        <span v-if="icon" class="icon">
-            <img :src="icon" alt="icona">
-        </span>
+    <button type="button" class="border-0 px-3 py-2   rounded-5 " :class="computedClass">
+        <img v-if="icon" :src="icon" alt="icona" class="img-fluid icon ">
         {{ buttonText }}
     </button>
 </template>
@@ -21,12 +19,7 @@ export default {
             type: Boolean,
             default: false,
         },
-        buttonText: {
-            type: String,
-            default: 'Default Yellow Text'
-        },
         
-        icon: String,
 
         //button white 
         white: {
@@ -42,6 +35,13 @@ export default {
             default: false,
         },
         
+
+        buttonText: {
+            type: String,
+            default: 'Default Yellow Text'
+        },
+        
+        icon: String,
        
     },
 
@@ -74,4 +74,11 @@ export default {
     background-color: $redBg;
     color: $whiteText;
 }
+
+.icon {
+    width: 30px;
+    height: 20px; 
+    background-size: contain; 
+}
+
 </style>
