@@ -26,13 +26,13 @@
         </p>
     </div>
 
-    <div class="container-fluid p-0 border-1 border border-dark-subtle mt-5">
+    <div class="container-fluid p-0 border-1  mt-5 mt-5">
         <div class=" px-5 ">
 
             <div class=" d-flex justify-content-center ">
 
-                <div v-for="(element, index) in faculties" :key="index" id="facultiesAvailable"
-                    class="d-flex flex-column justify-content-center border border-dark-subtle p-2">
+                <div v-for="(element, index) in faculties" :key="index" @click="changeFaculty(index)"
+                    id="facultiesAvailable" class="d-flex flex-column justify-content-center border border-dark-subtle p-2">
                     <div class="d-flex justify-content-center mt-3  ">
 
                         <img :src="element.img" alt="Faculties" height="100%" width="60%">
@@ -40,36 +40,50 @@
                     <div class="text-center mt-3">
                         <span>{{ element.name }}</span>
                     </div>
-
                 </div>
-
             </div>
-
-
         </div>
-        <div v-for="(element, index ) in faculties" :key="index" class="d-flex justify-content-center container mt-5 gap-5 ">
-            <div class="col-6 d-flex justify-content-end ">
-                <img :src="element.img2" alt="low faculty">
+    </div>
+
+    <div id="bgOpttionFaculty" >
+        <div class="container d-flex justify-content-center  mt-5 gap-5">
+            <div class="col-6 d-flex justify-content-end  p-4 ">
+                <img :src="faculties[facultiesCorrent].img2" alt="low faculty" height="60%" width="50%">
             </div>
             <div class="col-6 p-4 ">
-                <h2>{{ element.name }}</h2>
-                <p class="mt-4"> {{ element.text }}</p>
-                <button>ciao</button>
+                <h2 class=" p-4">{{ faculties[facultiesCorrent].name }}</h2>
+                <p class="mt-4 p-4"> {{ faculties[facultiesCorrent].text }}</p>
+                <AppButton red :button-text="'Read More'" />
             </div>
         </div>
 
+    </div>
 
+    <div>
+        <AppUniveristyYear/>
+    </div>
+
+    <div>
+        <AppUpcomingEvents/>
+    </div>
+
+    <div>
+        <AppLatestCourses/>
     </div>
 </template>
 
 <script>
 import AppButton from '../Button/AppButton.vue';
+import AppUniveristyYear from '../main/AppUniveristyYears.vue';
+import AppUpcomingEvents from '../main/AppUpcomingEvents.vue';
+import AppLatestCourses from '../main/AppLatestCourses.vue';
 
 
 export default {
     name: 'AppMain',
     data() {
         return {
+            facultiesCorrent: 0,
             faculties: [
                 {
                     name: 'Low faculty',
@@ -111,7 +125,16 @@ export default {
         };
     },
     components: {
-        AppButton
+    AppButton,
+    AppUniveristyYear,
+    AppUpcomingEvents,
+    AppLatestCourses,
+    AppLatestCourses
+},
+    methods: {
+        changeFaculty(index) {
+            this.facultiesCorrent = index
+        },
     }
 }
 </script>
@@ -124,6 +147,9 @@ export default {
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+
+
+
 }
 
 #facultiesAvailable {
@@ -145,5 +171,13 @@ export default {
     box-shadow: 1px -9px 22px 3px rgba(227, 220, 220, 1);
     -webkit-box-shadow: 1px -9px 22px 3px rgba(227, 220, 220, 1);
     -moz-box-shadow: 1px -9px 22px 3px rgba(227, 220, 220, 1);
+}
+
+#bgOpttionFaculty {
+    height: 450px;
+    background-image: url(../../assets/svg/svg-0.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 }
 </style>

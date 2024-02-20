@@ -2,12 +2,12 @@
     <nav class="navbar navbar-expand-lg p-4 d-flex justify-content-between ">
 
         <div class="container-fluid m-0 ">
-            <div class="col-4">
-                <img src="../../assets/img/theme_eduprime_logo.png" height="100%" width="40%" alt="logo">
+            <div class="col-2 col-lg-2 ">
+                <img class="img-fluid   " src="../../assets/img/theme_eduprime_logo.png" height="80%" width="80%" alt="logo">
             </div>
 
-            <div class="col-8 collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
-                <ul class="navbar-nav gap-2  mb-2 mb-lg-0 ">
+            <div class="col-10 collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+                <ul class="navbar-nav gap-2  mb-2 mb-lg-0 d-flex align-items-center  ">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -80,7 +80,7 @@
                     </li>
 
                     <li>
-                        <AppButton yellow :button-text="'view courses'" />
+                        <AppButton yellow :button-text="'view courses'" class="text-uppercase "/>
                     </li>
 
                 </ul>
