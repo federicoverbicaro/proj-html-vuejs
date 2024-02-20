@@ -70,6 +70,9 @@
     <div>
         <AppLatestCourses/>
     </div>
+    <div>
+        <AppMethodStudio/>
+    </div>
 </template>
 
 <script>
@@ -77,6 +80,7 @@ import AppButton from '../Button/AppButton.vue';
 import AppUniveristyYear from '../main/AppUniveristyYears.vue';
 import AppUpcomingEvents from '../main/AppUpcomingEvents.vue';
 import AppLatestCourses from '../main/AppLatestCourses.vue';
+import AppMethodStudio from '../main/AppMethodStudio.vue';
 
 
 export default {
@@ -129,7 +133,8 @@ export default {
     AppUniveristyYear,
     AppUpcomingEvents,
     AppLatestCourses,
-    AppLatestCourses
+    AppLatestCourses,
+    AppMethodStudio
 },
     methods: {
         changeFaculty(index) {

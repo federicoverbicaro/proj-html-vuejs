@@ -1,5 +1,5 @@
 <template>
-    <div id="upcoming" class="container-fluid pt-5 ">
+    <div id="upcoming" class="container-fluid pt-5">
 
 
         <div class="d-flex flex-column  ">
