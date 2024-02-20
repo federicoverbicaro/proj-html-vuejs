@@ -10,7 +10,7 @@
                     can find a course that satisfies your needs within a click away and applies for a course
                     in a matter of minutes. EduPrime is ranked as the most versatile university in the
                     world, thanks to the number of courses it provides.</p>
-                <AppButton yellow :button-text="'browse through courses'" />
+                <button class="text-capitalize ">browse through courses</button>
             </div>
             <div class="col-5 pt-5 ">
                 <img src="../../assets/img/Graduation-Illustration.png" alt="" height="100%" width="100%">
@@ -185,4 +185,16 @@ export default {
     background-position: bottom;
     background-size: contain;
 }
+button{
+    background-color: $yellowBg;
+    color: $whiteText;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+
+    &:hover{
+        background-color:$redBg2;
+        color: $whiteText;
+    }
+  }
 </style>

@@ -75,5 +75,11 @@ export default {
 
 img {
     opacity: 0.4;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 1;
+        color: $blackText2;
+    }
 }
 </style>

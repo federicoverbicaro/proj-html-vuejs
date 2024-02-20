@@ -253,7 +253,7 @@ input {
 }
 
 #icon {
-    width: 17%;
+    width: 15%;
     right: 0%;
     top: 0;
     padding: 10px;

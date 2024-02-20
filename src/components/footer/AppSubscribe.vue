@@ -62,7 +62,7 @@ export default {
     }
 
     #icon {
-        width: 8%;
+        width: 7%;
         right: 50%;
         top: 0;
         padding: 10px;

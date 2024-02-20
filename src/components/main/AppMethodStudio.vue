@@ -50,7 +50,7 @@
                 </p>
 
                 <div>
-                    <AppButton red :button-text="'List of Fees'" />
+                    <button class="text-capitalize ">list of fees</button>
                 </div>
             </div>
 
@@ -77,4 +77,19 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '../../styles/general.scss';
+
+  button{
+    background-color: $redBg;
+    color: $whiteText;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+
+    &:hover{
+        background-color: $yellowBg;
+        color: $whiteText;
+    }
+  }
+</style>

@@ -3,7 +3,7 @@
 
         <div class="container-fluid m-0 ">
             <div class="col-2 col-lg-2 ">
-                <img class="img-fluid   " src="../../assets/img/theme_eduprime_logo.png" height="80%" width="80%" alt="logo">
+                <img class="" src="../../assets/img/theme_eduprime_logo.png" height="80%" width="80%" alt="logo">
             </div>
 
             <div class="col-10 collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
@@ -80,7 +80,7 @@
                     </li>
 
                     <li>
-                        <AppButton yellow :button-text="'view courses'" class="text-uppercase "/>
+                        <button class="text-uppercase ">view courses</button>
                     </li>
 
                 </ul>
@@ -120,6 +120,10 @@ export default {
 
 nav {
     background-color: $redBg2;
+
+    img{
+        max-width: 200px;
+    }
    
   #navbarSupportedContent > ul {
     li > a{
@@ -130,6 +134,18 @@ nav {
         &:hover{
             color:$yellowText;
         }
+    }
+  }
+  button{
+    background-color: $yellowBg;
+    color: $whiteText;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+
+    &:hover{
+        background-color: $whiteBg;
+        color: $redText;
     }
   }
 }
