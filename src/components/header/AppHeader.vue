@@ -1,5 +1,5 @@
 <template>
-    <AppNavbars />
+    <AppNavbars :menuItems="menuItems" />
     <div class="bgOnde position-relative ">
         <div id="introducion" class="text-center d-flex flex-column justify-content-center row-gap-4">
             <div class="gap-5 d-flex justify-content-center flex-column  ">
@@ -66,20 +66,93 @@
 
 <script>
 import AppNavbars from './AppNavbars.vue';
-import AppButton from '../Button/AppButton.vue';
-import yellowIcon from '../../assets/svg/magnifying-glass-solid.svg';
-
 
 export default {
     name: 'AppHeader',
     data() {
         return {
-            yellowIcon: yellowIcon
+            menuItems: [
+                {
+                    text: 'Home', url: '/', dropdown: true, submenu: [
+                        {
+                            text: 'Courses available', url: '#coursesAvailable'
+                        },
+                        {
+                            text: 'Faculties available', url: '#faculties'
+                        },
+                        {
+                            text: 'University Year', url: '#university'
+                        },
+                        {
+                            text: 'Upcoming Events', url: '#upcoming'
+                        },
+                        {
+                            text: 'Lates Courses', url: '#latesCourses'
+                        },
+                        {
+                            text: 'Partners', url: '#partners'
+                        },
+
+
+                    ]
+                },
+                {
+                    text: 'Courses', url: '/courses', dropdown: true, submenu: [
+                        {
+                            text: 'Low faculty', url: '/courses/computer-science'
+                        },
+                        {
+                            text: 'Economy', url: '/courses/mathematics'
+                        },
+                        {
+                            text: 'Medicine', url: '/courses/physics'
+                        },
+                        {
+                            text: 'Computer Science', url: '/courses/physics'
+                        },
+                        {
+                            text: 'Graphic Design', url: '/courses/physics'
+                        },
+                    ]
+                },
+                {
+                    text: 'About Us', url: '/about-us', dropdown: false
+                },
+                {
+                    text: 'News', url: '/news', dropdown: true, submenu: [
+                        {
+                            text: 'Latest News', url: '/news/latest'
+                        },
+                        {
+                            text: 'Events', url: '/news/events'
+                        }
+                    ]
+                },
+                {
+                    text: 'Pages', url: '/pages', dropdown: true, submenu: [
+                        {
+                            text: 'Contact Us', url: '/pages/contact-us'
+                        },
+                        {
+                            text: 'FAQ', url: '/pages/faq'
+                        },
+                        {
+                            text: 'Terms of Service', url: '/pages/terms-of-service'
+                        }
+                    ]
+                },
+                {
+                    text: 'Contact', url: '/contact', dropdown: false
+                },
+                {
+                    text: 'Purchase', url: '/purchase', dropdown: false
+                }
+            ]
         };
     },
     components: {
         AppNavbars,
-        AppButton
+
     }
 }
 </script>
@@ -136,4 +209,5 @@ export default {
         border-radius: 30px;
     }
 
-}</style>
+}
+</style>

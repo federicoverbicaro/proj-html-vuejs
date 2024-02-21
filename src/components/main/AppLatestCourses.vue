@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="latesCourses">
         <div class="container mt-5  ">
             <h2 class="text-capitalize ">lates courses</h2>
 

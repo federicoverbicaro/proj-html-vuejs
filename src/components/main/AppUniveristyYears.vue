@@ -1,5 +1,5 @@
 <template>
-    <div class="bgUniverityYear  pt-5 d-flex justify-content-center ">
+    <div id="university" class="bgUniverityYear  pt-5 d-flex justify-content-center ">
         <div class=" d-flex flex-column  ">
 
             <div class="text-capitalize text-white d-flex flex-column align-items-center   ">

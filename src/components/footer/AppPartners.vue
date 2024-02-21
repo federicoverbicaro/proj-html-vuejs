@@ -1,6 +1,6 @@
 <template>
     
-        <div class="container mt-4 mb-5">
+        <div id="partners" class="container mt-4 mb-5">
             <div class="text-center d-flex align-items-center  flex-column ">
 
                 <h2 class="text-capitalize ">partners</h2>

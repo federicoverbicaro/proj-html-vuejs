@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid1 ">
         <div class="container d-flex gap-4 pt-5 ">
-            <div class="col-7">
+            <div id="coursesAvailable" class="col-7">
                 <img src="../../assets/img/Books-icon.png" alt="books" height="20%" width="10%">
                 <h2 class="mt-3">Thousands of courses
                     for any type of student
@@ -18,7 +18,7 @@
         </div>
 
     </div>
-    <div class="text-center mt-5 ">
+    <div id="faculties" class="text-center mt-5 ">
         <h2>Faculties available at EduPrime</h2>
 
         <p class="mt-4">Asingle university with a load of courses, tailored

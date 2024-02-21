@@ -12,7 +12,6 @@
     <AppFooter/>
   </footer>
 
-<!-- <AppButton yellow :button-text="'bella'" /> -->
 
 </template>
 
@@ -20,8 +19,7 @@
 import AppHeader from './components/header/AppHeader.vue';
 import AppMain from './components/main/AppMain.vue';
 import AppFooter from './components/footer/AppFooter.vue';
-// import AppButton from './components/Button/AppButton.vue';
-// import yellowIcon from './assets/img/Speaker-icon.png';
+
 
 
 //inserimento tag creazione componenti 
@@ -31,11 +29,11 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
-    //  AppButton,
+  
 },
 data() {
   return {
-    // yellowIcon: yellowIcon
+    
   }
 },
   

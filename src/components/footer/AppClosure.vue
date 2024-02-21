@@ -102,8 +102,8 @@
 
             <div class="col-1 d-flex justify-content-end ">
                 <div class="d-flex justify-content-end align-items-end ">
-                    <a class=" bg-warning  p-2" href="">
-                        <img src="../../assets/img/back-to-top-arrow.svg" alt="">
+                    <a class=" bg-warning  p-2" href="navbars">
+                        <img src="../../assets/img/back-to-top-arrow.svg" alt="top-arrow">
                     </a>
                 </div>
 
