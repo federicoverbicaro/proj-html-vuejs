@@ -12,8 +12,8 @@
                 </div>
             </div>
             <div class="col-2">
-                <img src="../../assets/img/theme_eduprime_logo.png" alt="logo" height="10%" width="100%">
-                <p class="pt-3">EduPrime is the most versatile WordPress theme for
+                <img src="../../assets/img/theme_eduprime_logo.png" alt="logo" height="13%" width="100%">
+                <p class="pt-3 lh-lg">EduPrime is the most versatile WordPress theme for
                     educational purposes, showcasing universities,
                     courses, secondary schools etc.
                 </p>
@@ -46,23 +46,13 @@
                 </div>
             </div>
             <div class="col-2">
-                <ul>
-                    <h5 class="mb-4">get eduprime</h5>
-                    <li v-for="(element, index) in getEduPrime" :key="index">
-                        {{ element.text }}
-                    </li>
-                </ul>
+                <AppListGetEduprime :getEduPrime="getEduPrime"/>
             </div>
             <div class="col-2">
-                <ul>
-                    <h5 class="mb-4">networking</h5>
-                    <li v-for="(element, index) in networking" :key="index">
-                        {{ element.text }}
-                    </li>
-                </ul>
+                <AppListNetworking :networking="networking"/>
             </div>
 
-            <div class="col-3">
+            <div class="col-3 d-flex flex-column">
                 <div id="serch" class="col-12 position-relative d-flex ">
                     <input class="col-12" type="email" name="" id="" placeholder="Search...">
 
@@ -78,7 +68,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column pt-3  ">
 
                     <div class="mt-4 mb-4 d-flex justify-content-end ">
                         <h5>search categories</h5>
@@ -94,7 +84,7 @@
 
                     </div>
 
-                    <div class="mt-4 d-flex justify-content-end">
+                    <div class="mt-4 d-flex justify-content-end pt-5 ">
                         <h6 class="text-warning ">ModelTheme. All rights reserved.</h6>
                     </div>
                 </div>
@@ -115,7 +105,13 @@
 </template>
 
 <script>
+import AppListGetEduprime from '../footer/AppListGetEduprime.vue'
+import AppListNetworking from '../footer/AppListNetworking.vue'
 export default {
+    components:{
+        AppListGetEduprime,
+        AppListNetworking
+    },
     data() {
         return {
             getEduPrime: [
@@ -183,7 +179,9 @@ export default {
             ],
 
         }
-    }
+
+    },
+   
 }
 </script>
 
@@ -206,11 +204,7 @@ h5 {
 }
 
 ul {
-    list-style-type: none;
-
-    li {
-        margin-top: 9px;
-    }
+     list-style-type: none;
 }
 
 .width {
@@ -273,4 +267,5 @@ a {
     justify-content: center;
     align-items: center;
 
-}</style>
+}
+</style>

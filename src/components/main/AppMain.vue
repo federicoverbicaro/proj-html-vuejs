@@ -10,10 +10,10 @@
                     can find a course that satisfies your needs within a click away and applies for a course
                     in a matter of minutes. EduPrime is ranked as the most versatile university in the
                     world, thanks to the number of courses it provides.</p>
-                <button class="text-capitalize ">browse through courses</button>
+                <button class="text-capitalize p-3 ">browse through courses</button>
             </div>
             <div class="col-5 pt-5 ">
-                <img src="../../assets/img/Graduation-Illustration.png" alt="" height="100%" width="100%">
+                <img src="../../assets/img/Graduation-Illustration.png" alt="Graduation" height="100%" width="100%">
             </div>
         </div>
 
@@ -50,12 +50,12 @@
         <div id="bgOpttionFaculty">
             <div class="container d-flex justify-content-center  mt-5 gap-5">
                 <div class="col-6 d-flex justify-content-end  p-4 ">
-                    <img :src="faculties[facultiesCorrent].img2" alt="low faculty" height="60%" width="50%">
+                    <img :src="faculties[facultiesCorrent].img2" alt="low faculty" height="95%" width="45%">
                 </div>
                 <div class="col-6 p-4 ">
-                    <h2 class=" p-4">{{ faculties[facultiesCorrent].name }}</h2>
-                    <p class="mt-4 p-4"> {{ faculties[facultiesCorrent].text }}</p>
-                    <AppButton red :button-text="'Read More'" />
+                    <h2 class=" p-3 m-0 ">{{ faculties[facultiesCorrent].name }}</h2>
+                    <p class=" p-3 m-0 "> {{ faculties[facultiesCorrent].text }}</p>
+                    <AppButton red :button-text="'Read More'"/>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
     <div>
         <AppLatestCourses />
     </div>
-    <div>
+    <div class="pt-5">
         <AppMethodStudio />
     </div>
 </template>

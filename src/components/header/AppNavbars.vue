@@ -1,5 +1,5 @@
 <template>
-    <nav id="navbars" class="navbar navbar-expand-lg p-4 d-flex justify-content-between ">
+    <nav id="navbars" class="navbar navbar-expand-lg p-5 d-flex justify-content-between ">
 
         <div class="container-fluid m-0 ">
             <div class="col-2 col-lg-2 ">
@@ -8,7 +8,7 @@
 
             <div class="col-10 collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 
-                <ul class="navbar-nav gap-2 mb-2 mb-lg-0 d-flex align-items-center">
+                <ul class="navbar-nav gap-4 mb-2 mb-lg-0 d-flex align-items-center">
 
                     <li v-for="(menuItem, index) in menuItems" :key="index"
                         :class="{ 'nav-item': true, 'dropdown': menuItem.dropdown }">
@@ -18,17 +18,19 @@
                             {{ menuItem.text }}
                         </a>
 
-                        <ul  v-if="menuItem.dropdown" class="dropdown-menu">
+                        <ul v-if="menuItem.dropdown" class="dropdown-menu">
 
-                            <li  v-for="(subItem, subIndex) in menuItem.submenu" :key="subIndex"><a class="dropdown-item" id="textDropdown"
-                                    :href="subItem.url">{{ subItem.text }}</a>
+                            <li v-for="(subItem, subIndex) in menuItem.submenu" :key="subIndex"><a class="dropdown-item"
+                                    id="textDropdown" :href="subItem.url">{{ subItem.text }}</a>
                             </li>
                         </ul>
 
                     </li>
 
                 </ul>
-                <button class="text-uppercase">view courses</button>
+                <div class="ms-4 ">
+                    <button class="text-uppercase p-3 fw-bolder  ">view courses</button>
+                </div>
             </div>
 
         </div>
@@ -64,7 +66,6 @@ export default {
 
 
 nav {
-    background-color: $redBg2;
 
     img {
         max-width: 200px;
@@ -82,12 +83,12 @@ nav {
         }
 
 
-        #textDropdown{
-                color:$blackText;
-                
-                &:hover{
-                    color: $yellowText;
-                }
+        #textDropdown {
+            color: $blackText;
+
+            &:hover {
+                color: $yellowText;
+            }
 
         }
     }

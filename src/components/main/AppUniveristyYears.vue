@@ -5,7 +5,7 @@
             <div class="text-capitalize text-white d-flex flex-column align-items-center   ">
                 <img src="../../assets/img/Clock-and-Bell.png" alt="clock and bell" height="50" width="50">
 
-                <h2 class="mt-2">university year</h2>
+                <h2 class="mt-2 fs-1 ">university year</h2>
             </div>
 
             <div id="timeLine" class="p-5 d-flex justify-content-center align-items-center position-relative h-100 ">

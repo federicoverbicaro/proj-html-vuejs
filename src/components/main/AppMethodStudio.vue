@@ -1,6 +1,6 @@
 <template>
     <div class="pt-5 container">
-        <div>
+        <div class="pt-5">
             <img src="../../assets/img/Exam-icon.png" alt="Exam" height="50" width="50">
 
             <div class="mt-3 d-flex">
@@ -17,7 +17,7 @@
                     </p>
 
                     <div>
-                        <AppButton red :button-text="'Discover the Method'" />
+                        <button class="text-capitalize p-3">discover the method</button>
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@
                 </p>
 
                 <div>
-                    <button class="text-capitalize ">list of fees</button>
+                    <button class="text-capitalize p-3">list of fees</button>
                 </div>
             </div>
 
@@ -80,16 +80,16 @@ export default {
 <style lang="scss" scoped>
 @import '../../styles/general.scss';
 
-  button{
+button {
     background-color: $redBg;
     color: $whiteText;
     border: none;
     padding: 10px;
     border-radius: 30px;
 
-    &:hover{
+    &:hover {
         background-color: $yellowBg;
         color: $whiteText;
     }
-  }
+}
 </style>

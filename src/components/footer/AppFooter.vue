@@ -7,7 +7,7 @@
         <AppPartners />
     </div>
     <div>
-        <AppClosure/>
+        <AppClosure />
     </div>
 </template>
 
@@ -20,7 +20,9 @@ import AppSubscribe from './AppSubscribe.vue';
 export default {
     name: 'AppFooter',
     data() {
-        return {};
+        return {
+
+        };
     },
     components: {
     AppSubscribe,

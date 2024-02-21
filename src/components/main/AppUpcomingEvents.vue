@@ -14,7 +14,7 @@
             <div class="d-flex gap-3 container pt-5 pb-5 ">
                 <div v-for="(element, index) in dateSession" :key="index" class="position-relative ">
 
-                    <div id="coaching" class="p-3 d-flex flex-column ">
+                    <div id="coaching" class="p-4 d-flex flex-column ">
                         <h4>coaching sessions</h4>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -28,7 +28,7 @@
                     </div>
 
                     <div>
-                        <button id="button1" class="text-capitalize">
+                        <button id="button1" class="text-capitalize ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-plus-lg" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -42,7 +42,7 @@
             </div>
 
             <div class="d-flex justify-content-center">
-                <button id="button2" class=" text-capitalize ">view all events</button>
+                <button id="button2" class=" text-capitalize p-3 ">view all events</button>
             </div>
 
         </div>
