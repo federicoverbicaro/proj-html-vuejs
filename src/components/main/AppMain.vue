@@ -18,60 +18,63 @@
         </div>
 
     </div>
-    <div id="faculties" class="text-center mt-5 ">
-        <h2>Faculties available at EduPrime</h2>
+    <div @mouseover="stopSlide" @mouseleave="slideAttivo">
+        <div id="faculties" class="text-center mt-5 ">
+            <h2>Faculties available at EduPrime</h2>
 
-        <p class="mt-4">Asingle university with a load of courses, tailored
-            to satisfy any student’s needs.
-        </p>
-    </div>
+            <p class="mt-4">Asingle university with a load of courses, tailored
+                to satisfy any student’s needs.
+            </p>
+        </div>
 
-    <div class="container-fluid p-0 border-1  mt-5 mt-5">
-        <div class=" px-5 ">
+        <div class="container-fluid p-0 border-1  mt-5 mt-5">
+            <div class=" px-5 ">
 
-            <div class=" d-flex justify-content-center ">
+                <div class=" d-flex justify-content-center ">
 
-                <div v-for="(element, index) in faculties" :key="index" @click="changeFaculty(index)"
-                    id="facultiesAvailable" class="d-flex flex-column justify-content-center border border-dark-subtle p-2">
-                    <div class="d-flex justify-content-center mt-3  ">
+                    <div v-for="(element, index) in faculties" :key="index" @click="changeFaculty(index)"
+                        id="facultiesAvailable"
+                        class="d-flex flex-column justify-content-center border border-dark-subtle p-2">
+                        <div class="d-flex justify-content-center mt-3  ">
 
-                        <img :src="element.img" alt="Faculties" height="100%" width="60%">
-                    </div>
-                    <div class="text-center mt-3">
-                        <span>{{ element.name }}</span>
+                            <img :src="element.img" alt="Faculties" height="100%" width="60%">
+                        </div>
+                        <div class="text-center mt-3">
+                            <span>{{ element.name }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="bgOpttionFaculty" >
-        <div class="container d-flex justify-content-center  mt-5 gap-5">
-            <div class="col-6 d-flex justify-content-end  p-4 ">
-                <img :src="faculties[facultiesCorrent].img2" alt="low faculty" height="60%" width="50%">
+        <div id="bgOpttionFaculty">
+            <div class="container d-flex justify-content-center  mt-5 gap-5">
+                <div class="col-6 d-flex justify-content-end  p-4 ">
+                    <img :src="faculties[facultiesCorrent].img2" alt="low faculty" height="60%" width="50%">
+                </div>
+                <div class="col-6 p-4 ">
+                    <h2 class=" p-4">{{ faculties[facultiesCorrent].name }}</h2>
+                    <p class="mt-4 p-4"> {{ faculties[facultiesCorrent].text }}</p>
+                    <AppButton red :button-text="'Read More'" />
+                </div>
             </div>
-            <div class="col-6 p-4 ">
-                <h2 class=" p-4">{{ faculties[facultiesCorrent].name }}</h2>
-                <p class="mt-4 p-4"> {{ faculties[facultiesCorrent].text }}</p>
-                <AppButton red :button-text="'Read More'" />
-            </div>
+
         </div>
-
     </div>
 
     <div>
-        <AppUniveristyYear/>
+        <AppUniveristyYear />
     </div>
 
     <div>
-        <AppUpcomingEvents/>
+        <AppUpcomingEvents />
     </div>
 
     <div>
-        <AppLatestCourses/>
+        <AppLatestCourses />
     </div>
     <div>
-        <AppMethodStudio/>
+        <AppMethodStudio />
     </div>
 </template>
 
@@ -87,6 +90,7 @@ export default {
     name: 'AppMain',
     data() {
         return {
+            scroll: null,
             facultiesCorrent: 0,
             faculties: [
                 {
@@ -129,17 +133,40 @@ export default {
         };
     },
     components: {
-    AppButton,
-    AppUniveristyYear,
-    AppUpcomingEvents,
-    AppLatestCourses,
-    AppLatestCourses,
-    AppMethodStudio
-},
+        AppButton,
+        AppUniveristyYear,
+        AppUpcomingEvents,
+        AppLatestCourses,
+        AppLatestCourses,
+        AppMethodStudio
+    },
     methods: {
         changeFaculty(index) {
             this.facultiesCorrent = index
         },
+
+        slide() {
+
+            if (this.facultiesCorrent === Object.keys(this.faculties).length - 1) {
+                this.facultiesCorrent = 0
+            } else {
+                this.facultiesCorrent = this.facultiesCorrent + 1
+            }
+        },
+
+        slideAttivo() {
+            this.scroll = setInterval(() => {
+                this.slide()
+            }, 3000)
+
+        },
+
+        stopSlide() {
+            clearInterval(this.scroll)
+        },
+
+
+
     }
 }
 </script>
@@ -185,16 +212,17 @@ export default {
     background-position: bottom;
     background-size: contain;
 }
-button{
+
+button {
     background-color: $yellowBg;
     color: $whiteText;
     border: none;
     padding: 10px;
     border-radius: 30px;
 
-    &:hover{
-        background-color:$redBg2;
+    &:hover {
+        background-color: $redBg2;
         color: $whiteText;
     }
-  }
+}
 </style>

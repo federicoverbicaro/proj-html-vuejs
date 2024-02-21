@@ -8,7 +8,7 @@
             </div>
 
 
-            <div id="serch" class="col-6 position-relative">
+            <div id="serch" class="col-6 position-relative d-flex justify-content-center ">
                 <input class="w-50  " type="email" name="" id="" placeholder="Email andress...">
 
 
@@ -63,7 +63,7 @@ export default {
 
     #icon {
         width: 7%;
-        right: 50%;
+        right: 25%;
         top: 0;
         padding: 10px;
         border-radius: 100%;
